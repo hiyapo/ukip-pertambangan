@@ -78,8 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return; // Ignore empty hash links
+            
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
                 const headerOffset = 80;
                 const elementPosition = target.getBoundingClientRect().top;
@@ -184,29 +187,33 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(handleScrollReveal, 300);
 
     // =========================================
-    // Video Play/Pause
+    // Video Play/Pause (Multiple Videos Support)
     // =========================================
-    const videoOverlay = document.querySelector('.video-play-overlay');
-    const video = document.querySelector('.video-wrapper video');
+    const videoWrappers = document.querySelectorAll('.video-wrapper');
 
-    if (videoOverlay && video) {
-        videoOverlay.addEventListener('click', () => {
-            videoOverlay.classList.add('hidden');
-            video.play();
-            video.setAttribute('controls', 'true');
-        });
+    videoWrappers.forEach(wrapper => {
+        const videoOverlay = wrapper.querySelector('.video-play-overlay');
+        const video = wrapper.querySelector('video');
 
-        video.addEventListener('pause', () => {
-            if (video.currentTime > 0 && !video.ended) {
+        if (videoOverlay && video) {
+            videoOverlay.addEventListener('click', () => {
+                videoOverlay.classList.add('hidden');
+                video.play();
+                video.setAttribute('controls', 'true');
+            });
+
+            video.addEventListener('pause', () => {
+                if (video.currentTime > 0 && !video.ended) {
+                    videoOverlay.classList.remove('hidden');
+                }
+            });
+
+            video.addEventListener('ended', () => {
                 videoOverlay.classList.remove('hidden');
-            }
-        });
-
-        video.addEventListener('ended', () => {
-            videoOverlay.classList.remove('hidden');
-            video.removeAttribute('controls');
-        });
-    }
+                video.removeAttribute('controls');
+            });
+        }
+    });
 
     // =========================================
     // Active nav link highlighting

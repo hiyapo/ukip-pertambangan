@@ -26,7 +26,7 @@
     <!-- ==================== HEADER ==================== -->
     <header class="header" id="header">
         <div class="container container-wide">
-            <a href="#" class="header-logo">
+            <a href="#beranda" class="header-logo">
                 <img src="asset/logo.jpeg" alt="Logo UKIP Teknik Pertambangan">
                 <div class="header-logo-text">
                     <span class="logo-name">Teknik Pertambangan</span>
@@ -150,9 +150,9 @@
                 <div class="stat-card">
                     <span class="stat-icon">💎</span>
                     <div class="stat-number">
-                        <span class="counter" data-target="7">0</span>
+                        <span class="counter" data-target="144" data-suffix=" SKS">0</span>
                     </div>
-                    <div class="stat-label">Mineral Dipelajari</div>
+                    <div class="stat-label">Mata kuliah Dipelajari</div>
                 </div>
                 <div class="stat-card">
                     <span class="stat-icon">🚀</span>
@@ -278,7 +278,29 @@
                     <source src="asset/video_promosi.mp4" type="video/mp4">
                     Browser Anda tidak mendukung pemutaran video.
                 </video>
-                <div class="video-play-overlay" id="video-overlay">
+                <div class="video-play-overlay">
+                    <div class="play-btn">
+                        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </div>
+                </div>
+            </div><br>
+            <div class="video-wrapper reveal">
+                <video preload="metadata">
+                    <source src="asset/video_perkenalan.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video.
+                </video>
+                <div class="video-play-overlay">
+                    <div class="play-btn">
+                        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </div>
+                </div>
+            </div><br>
+            <div class="video-wrapper reveal">
+                <video preload="metadata" poster="asset/thumbnail.jpeg">
+                    <source src="asset/video_promosi2.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video.
+                </video>
+                <div class="video-play-overlay">
                     <div class="play-btn">
                         <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                     </div>
@@ -295,42 +317,42 @@
 
             <div class="competency-grid">
                 <div class="competency-card">
-                    <div class="competency-icon">🔍</div>
+                    <img src="asset/Eksplorasi & Evaluasi Sumber Daya.jpg" alt="Exploration Geologist" class="career-icon">
                     <h3 class="competency-title">Eksplorasi &amp; Evaluasi Sumber Daya</h3>
                     <p class="competency-desc">Kemampuan melakukan eksplorasi, survei geologi, dan evaluasi sumber daya mineral secara komprehensif.</p>
                 </div>
                 <div class="competency-card">
-                    <div class="competency-icon">📐</div>
+                    <img src="asset/Perencanaan Tambang.jpg" alt="Exploration Geologist" class="career-icon">
                     <h3 class="competency-title">Perencanaan Tambang</h3>
                     <p class="competency-desc">Merancang dan merencanakan operasi penambangan yang efisien, aman, dan berkelanjutan.</p>
                 </div>
                 <div class="competency-card">
-                    <div class="competency-icon">⛏️</div>
+                    <img src="asset/Teknik Pertambangan.png" alt="Exploration Geologist" class="career-icon">
                     <h3 class="competency-title">Teknik Pertambangan</h3>
                     <p class="competency-desc">Penguasaan teknik penambangan terbuka dan bawah tanah dengan teknologi modern.</p>
                 </div>
                 <div class="competency-card">
-                    <div class="competency-icon">🌿</div>
+                    <img src="asset/Pengelolaan Lingkungan.jpg" alt="Exploration Geologist" class="career-icon">
                     <h3 class="competency-title">Pengelolaan Lingkungan</h3>
                     <p class="competency-desc">Manajemen dampak lingkungan pertambangan dan praktik reklamasi lahan tambang.</p>
                 </div>
-                <div class="competency-card">
-                    <div class="competency-icon">🔬</div>
+                <div class="competency-card">                    
+                    <img src="asset/Metalurgi & Pengolahan Mineral.jpg" alt="Exploration Geologist" class="career-icon">
                     <h3 class="competency-title">Metalurgi &amp; Pengolahan Mineral</h3>
                     <p class="competency-desc">Proses pengolahan dan pemurnian mineral untuk meningkatkan nilai tambah hasil tambang.</p>
                 </div>
                 <div class="competency-card">
-                    <div class="competency-icon">🦺</div>
+                    <img src="asset/Keselamatan & Kesehatan Kerja.jpg" alt="Exploration Geologist" class="career-icon">
                     <h3 class="competency-title">Keselamatan &amp; Kesehatan Kerja</h3>
                     <p class="competency-desc">Penerapan standar K3 internasional untuk lingkungan kerja tambang yang aman.</p>
                 </div>
                 <div class="competency-card">
-                    <div class="competency-icon">📊</div>
+                    <img src="asset/Manajemen & Kewirausahaan.jpg" alt="Exploration Geologist" class="career-icon">
                     <h3 class="competency-title">Manajemen &amp; Kewirausahaan</h3>
                     <p class="competency-desc">Keterampilan manajemen proyek dan jiwa kewirausahaan di bidang pertambangan.</p>
                 </div>
                 <div class="competency-card">
-                    <div class="competency-icon">💻</div>
+                    <img src="asset/Teknologi & Inovasi Digital.png" alt="Exploration Geologist" class="career-icon">
                     <h3 class="competency-title">Teknologi &amp; Inovasi Digital</h3>
                     <p class="competency-desc">Pemanfaatan teknologi digital, GIS, drone, dan AI dalam operasi pertambangan.</p>
                 </div>
@@ -431,13 +453,13 @@
                         Program Studi Teknik Pertambangan, Fakultas Teknik, Universitas Kristen Indonesia Paulus (UKIP) Makassar. Mencetak insinyur pertambangan yang unggul dan berdaya saing global.
                     </p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Facebook" target="_blank">
+                        <a href="https://facebook.com/ukipmakassar" aria-label="Facebook" target="_blank">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                         </a>
-                        <a href="#" aria-label="Instagram" target="_blank">
+                        <a href="https://instagram.com/ukipmakassar" aria-label="Instagram" target="_blank">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
-                        <a href="https://tiktok.com/@pertambangan.ukip" aria-label="TikTok" target="_blank">
+                        <a href="https://tiktok.com/@ukipmakassar" aria-label="TikTok" target="_blank">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
                         </a>
                     </div>
@@ -460,12 +482,12 @@
                 <div class="footer-col">
                     <h4>Akademik</h4>
                     <ul>
-                        <li><a href="#">Kurikulum</a></li>
-                        <li><a href="#">Dosen & Staff</a></li>
-                        <li><a href="#">Laboratorium</a></li>
-                        <li><a href="#">Penelitian</a></li>
-                        <li><a href="#">Kerja Praktek</a></li>
-                        <li><a href="#">Wisuda</a></li>
+                        <li><a href="javascript:void(0)">Kurikulum</a></li>
+                        <li><a href="javascript:void(0)">Dosen & Staff</a></li>
+                        <li><a href="javascript:void(0)">Laboratorium</a></li>
+                        <li><a href="javascript:void(0)">Penelitian</a></li>
+                        <li><a href="javascript:void(0)">Kerja Praktek</a></li>
+                        <li><a href="javascript:void(0)">Wisuda</a></li>
                     </ul>
                 </div>
 
@@ -492,7 +514,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Program Studi Teknik Pertambangan — <a href="#">Universitas Kristen Indonesia Paulus</a> Makassar. All Rights Reserved.</p>
+                <p>&copy; 2026 Program Studi Teknik Pertambangan — <a href="https://ukipaulus.ac.id" target="_blank">Universitas Kristen Indonesia Paulus</a> Makassar. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
