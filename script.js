@@ -118,15 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Animated Counter
     // =========================================
     const counters = document.querySelectorAll('.counter');
-    let countersAnimated = false;
 
     function animateCounters() {
-        if (countersAnimated) return;
-
         counters.forEach(counter => {
+            if (counter.classList.contains('animated')) return;
+
             const rect = counter.getBoundingClientRect();
             if (rect.top < window.innerHeight * 0.85) {
-                countersAnimated = true;
+                counter.classList.add('animated');
                 const target = parseInt(counter.getAttribute('data-target'));
                 const suffix = counter.getAttribute('data-suffix') || '';
                 const duration = 2000;
