@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================================
     // Scroll Reveal Animations
     // =========================================
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .info-card, .stat-card, .competency-card, .career-card, .timeline-item, .pimpinan-card, .dokumen-card, .dosen-card, .staff-card, .lab-card');
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .info-card, .stat-card, .competency-card, .career-card, .timeline-item, .pimpinan-card, .dokumen-card, .dosen-card, .staff-card, .lab-card, .visimisi-card');
 
     function handleScrollReveal() {
         revealElements.forEach((el, index) => {
