@@ -2452,6 +2452,191 @@ ul, ol {
 }
 
 /* =============================================
+   Visi & Misi Section
+   ============================================= */
+.visimisi-section {
+    background: var(--color-bg-section);
+    position: relative;
+}
+
+.visimisi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+/* --- Card --- */
+.visimisi-card {
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-glass-border);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.visimisi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-gold-gradient);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.visimisi-card:hover {
+    border-color: rgba(212, 168, 71, 0.25);
+    box-shadow: var(--shadow-glow);
+}
+
+.visimisi-card:hover::before {
+    opacity: 1;
+}
+
+/* --- Card Header --- */
+.visimisi-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-glass-border);
+}
+
+.visimisi-icon {
+    font-size: 2rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 6px rgba(212, 168, 71, 0.2));
+}
+
+.visimisi-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    letter-spacing: 0.5px;
+}
+
+/* --- Visi Quote --- */
+.visimisi-quote {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    padding-left: var(--space-md);
+    border-left: 3px solid var(--color-secondary);
+    font-style: italic;
+    position: relative;
+}
+
+.visimisi-quote strong {
+    color: var(--color-secondary-light);
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* --- Misi List --- */
+.visimisi-list {
+    list-style: none;
+    counter-reset: misi-counter;
+    padding: 0;
+    margin: 0;
+}
+
+.visimisi-list > li {
+    counter-increment: misi-counter;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: var(--space-md);
+    font-size: 0.88rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.visimisi-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.visimisi-list > li::before {
+    content: counter(misi-counter);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-full);
+    background: rgba(212, 168, 71, 0.12);
+    border: 1px solid rgba(212, 168, 71, 0.3);
+    color: var(--color-secondary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.visimisi-list > li strong {
+    color: var(--color-secondary-light);
+    font-weight: 600;
+}
+
+/* Sub-list */
+.visimisi-sublist {
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+    margin-left: 0;
+}
+
+.visimisi-sublist li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 5px;
+    font-size: 0.84rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.visimisi-sublist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: rgba(212, 168, 71, 0.4);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .visimisi-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .visimisi-card {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .visimisi-card-title {
+        font-size: 1.1rem;
+    }
+
+    .visimisi-quote {
+        font-size: 0.88rem;
+    }
+}
+
+/* =============================================
    Utility Classes
    ============================================= */
 .text-gold {
